@@ -77,9 +77,41 @@ The screenshots below shows a close-up of each city.
 
 In addition to the visualisation of the clusters, we can also look at the wards and top venues for each cluster.
 
+### Cluster Analysis
+
+#### Cluster 0 (Red)
+
+This cluster is the cluster coloured in red which contains 3 locations which are all in Tokyo. The most common venues in these areas are hotels and Japanese restaurants.
+
+#### Cluster 1 (Purple)
+
+Venues in this cluster are all located in Osaka with the number 1 most common venue being convenience stores for all of the wards in this list. This makes sense as looking at the cluster on the map, these wards are all on the outer area of the city. Other common venues are Ramen restaurants, Chinese restaurants, Donburi restaurants, etc.
+
+#### Cluster 2 (Blue)
+
+This cluster contains 5 wards in Osaka and 2 wards in Tokyo. The number 1 most common venue for all of the wards in this clusters are once again convenience stores. Other common venues in this cluster are intersections, supermarkets, parks, gyms, golf driving ranges, etc. So this seems to be clusters of wards which is good for recreational activities. I would say that these areas are good places to live in.
+
+####  Cluster 3 (Teal)
+
+This cluster has a few wards from Osaka. Looking at the map, this seems to be the cluster that most of Tokyo is in. It is also the cluster that the wards in the centre of Osaka is in. So we should be able to say that most of the areas in Tokyo that are similar to the city centre of Osaka. This makes sense as Osaka is less dense in population compared to Tokyo so in the areas of Tokyo which is less dense might be similar to central Osaka.
+
+#### Cluster 4 (Light green)
+
+The top venues in this cluster are Ramen restaurants with other common venues being parks, cafes, dessert shops, etc. It seems to be a more relaxing part of the cities. Looking at the map, wards in this cluster are on the outskirt of Tokyo and on the west of Osaka.
+
+#### Cluster 5
+
+This last cluster only has 1 ward which seems to be an outlier and is located in Osaka. The most common venue? Theme park rides. That's right, it's where Universal Studio Japan is located. Therefore, all the top venues in this area are rides, attractions, gift shop, hotels, etc. So understandably, this ward is different from most other wards in the data set.
+
 Check the [Python Notebook](./Tokyo_vs_Osaka.ipynb) for the full results.
 
 ## Discussion
+
+From the visualisation of the clusters on the map, we can tell that Osaka and Tokyo are both very unique despite that both of the are large cities in Japan.
+
+One of the surprising thing from the result is how so many wards in Osaka has convenience stores as the number 1 most common venue compared to only 2 wards in Tokyo with convenience store as number 1.
+
+It also appears that Osaka has a much higher frequency of Japanese style restaurants such as Ramen and Sushi restaurants. This seems to be the city to live in if you love exploring food.
 
 Using the median area size of a ward for each city as the radius is not the most accurate way to gather venue data. This method assumes that each ward has a circular area, and all wards has similar sizes. The outcome is that if a ward is smaller than the median size then the Foursquare API would return data outside the specific ward. Likewise, for a ward that is larger, venue data outside that radius would not be included in the statistic.
 
