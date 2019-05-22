@@ -1,5 +1,13 @@
 # Applied Data Science Capstone Project
 
+- [Applied Data Science Capstone Project](#applied-data-science-capstone-project)
+  - [Introduction](#introduction)
+  - [Data](#data)
+  - [Methodology](#methodology)
+  - [Results](#results)
+  - [Discussion](#discussion)
+  - [Conclusion](#conclusion)
+
 ## Introduction
 
 This is the final project for the IBM Data Science Professional Specialization course on Coursera. I will be using what I have learned about using location data and machine learning algorithms.
@@ -26,3 +34,40 @@ After cluster labels have been assigned for each row of data, I will merged it w
 The clusters will then be visualised on a map using the folium library.
 
 We should then be able to compare the clusters in the two cities for similarities or differences.
+
+## Methodology
+
+The first step is to gather the data required to do the analysis.
+To do this, I used the Beautiful Soup library to scrape relevant wikipedia pages for the list of wards for Tokyo and Osaka.
+
+Then, using the geocoder library and passing in the names of the ward, I was able to obtain coordinates for each ward. This is then visualised on a map using the folium library.
+
+![map of tokyo](screenshots/tokyo_map.png)
+*Map of Tokyo*
+
+![map of osaka](screenshots/osaka_map.png)
+*Map of Osaka*
+
+Once that is done, I will need to gather information on the top venue categories in each ward using the Foursquare API.
+
+The Foursquare API's explore endpoint takes in parameters for the radius from a coordinate to look for venues.
+In order to determine the radius to use, I once again scrape wikipedia for the list of area size of each ward, then calculate the median area size for each city and finally, assuming that the area is a circle (which it is not) I calculate the radius using the formula to find the area of a circle.
+
+Using the Foursquare API, I find up to 100 venues near each ward which is within the radius specified. The data is then grouped by wards and have the frequency of the venue categories converted to decimals so that it can be used with a clustering algorithm.
+
+K-means is used as the clustering algorithm for this problem. K-means is an unsupervised clustering algorithm that allows a specific number of clusters to be specified for the outcome.
+
+Judging by the number of wards in total, I have decided on a cluster size of 6. The clustering algorithm is applied on the data, and the resulting cluster labels is merged with the ward and city names which is then used to visualise the clusters on a map.
+
+## Results
+
+The results of the clustering algorithm is visualised in the screenshots below.
+
+![Map of Osaka and Tokyo with Clustering](screenshots/tokyo_osaka_clustered.png)
+*Map of Osaka and Tokyo with Clustering*
+
+limitations
+
+## Discussion
+
+## Conclusion
