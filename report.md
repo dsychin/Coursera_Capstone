@@ -5,6 +5,13 @@
   - [Data](#data)
   - [Methodology](#methodology)
   - [Results](#results)
+    - [Cluster Analysis](#cluster-analysis)
+      - [Cluster 0 (Red)](#cluster-0-red)
+      - [Cluster 1 (Purple)](#cluster-1-purple)
+      - [Cluster 2 (Blue)](#cluster-2-blue)
+      - [Cluster 3 (Teal)](#cluster-3-teal)
+      - [Cluster 4 (Light green)](#cluster-4-light-green)
+      - [Cluster 5 (Orange)](#cluster-5-orange)
   - [Discussion](#discussion)
   - [Conclusion](#conclusion)
 
@@ -99,7 +106,7 @@ This cluster has a few wards from Osaka. Looking at the map, this seems to be th
 
 The top venues in this cluster are Ramen restaurants with other common venues being parks, cafes, dessert shops, etc. It seems to be a more relaxing part of the cities. Looking at the map, wards in this cluster are on the outskirt of Tokyo and on the west of Osaka.
 
-#### Cluster 5
+#### Cluster 5 (Orange)
 
 This last cluster only has 1 ward which seems to be an outlier and is located in Osaka. The most common venue? Theme park rides. That's right, it's where Universal Studio Japan is located. Therefore, all the top venues in this area are rides, attractions, gift shop, hotels, etc. So understandably, this ward is different from most other wards in the data set.
 
@@ -113,8 +120,12 @@ One of the surprising thing from the result is how so many wards in Osaka has co
 
 It also appears that Osaka has a much higher frequency of Japanese style restaurants such as Ramen and Sushi restaurants. This seems to be the city to live in if you love exploring food.
 
+It also seems that Ramen restaurants are very common in almost all of the wards. I guess there is no escaping from Ramen while in Japan.
+
 Using the median area size of a ward for each city as the radius is not the most accurate way to gather venue data. This method assumes that each ward has a circular area, and all wards has similar sizes. The outcome is that if a ward is smaller than the median size then the Foursquare API would return data outside the specific ward. Likewise, for a ward that is larger, venue data outside that radius would not be included in the statistic.
 
 ## Conclusion
 
 In conclusion, although these 2 large cities are both in Japan, based on the venue categories of places in each city, we can see that the 2 cities are quite different.
+
+We were able to visualise the results on a map and analyse the clusters to determine why the clustering algorithms has clustered them in this way and make observations and discussions on the data.
