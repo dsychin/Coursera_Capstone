@@ -66,8 +66,23 @@ The results of the clustering algorithm is visualised in the screenshots below.
 ![Map of Osaka and Tokyo with Clustering](screenshots/tokyo_osaka_clustered.png)
 *Map of Osaka and Tokyo with Clustering*
 
-limitations
+The screenshot above shows the two cities side by side and right away we can see that the colours are quite different for each city.
+The screenshots below shows a close-up of each city.
+
+![Map of Tokyo with Clustering](screenshots/tokyo_clustered.png)
+*Map of Tokyo with Clustering*
+
+![Map of Osaka with Clustering](screenshots/osaka_clustered.png)
+*Map of Osaka with Clustering*
+
+In addition to the visualisation of the clusters, we can also look at the wards and top venues for each cluster.
+
+Check the [Python Notebook](./Tokyo_vs_Osaka.ipynb) for the full results.
 
 ## Discussion
 
+Using the median area size of a ward for each city as the radius is not the most accurate way to gather venue data. This method assumes that each ward has a circular area, and all wards has similar sizes. The outcome is that if a ward is smaller than the median size then the Foursquare API would return data outside the specific ward. Likewise, for a ward that is larger, venue data outside that radius would not be included in the statistic.
+
 ## Conclusion
+
+In conclusion, although these 2 large cities are both in Japan, based on the venue categories of places in each city, we can see that the 2 cities are quite different.
